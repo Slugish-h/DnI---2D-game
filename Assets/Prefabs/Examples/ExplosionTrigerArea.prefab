@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1531355967405516407}
   - component: {fileID: 8226240654398341717}
   - component: {fileID: 8997539357804572013}
+  - component: {fileID: -2325490524940024847}
   m_Layer: 0
   m_Name: ExplosionTrigerArea
   m_TagString: Untagged
@@ -54,18 +55,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5523209999227544967}
         m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
-        m_MethodName: RespawnPlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5523209999227544967}
-        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
         m_MethodName: DestroyOtherObject
         m_Mode: 0
         m_Arguments:
@@ -80,11 +69,13 @@ MonoBehaviour:
     triggerExitEvent:
       m_PersistentCalls:
         m_Calls: []
-  triggerableByPlayer: 1
+  triggerableByPlayer: 0
   triggerableByObject: 1
   triggerableByTaggedObject: 0
   objectTag: 
+  limitNumberOfUses: 0
   numberOfUses: -1
+  requiredEnabled: []
   drawTriggerArea: 1
   drawTriggerLines: 1
   triggerAreaColor: {r: 0, g: 1, b: 0, a: 0.5}
@@ -161,7 +152,9 @@ MonoBehaviour:
   triggerableByObject: 0
   triggerableByTaggedObject: 1
   objectTag: PhysicsObject
+  limitNumberOfUses: 0
   numberOfUses: -1
+  requiredEnabled: []
   drawTriggerArea: 1
   drawTriggerLines: 1
   triggerAreaColor: {r: 0, g: 1, b: 0, a: 0.5}
@@ -227,3 +220,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-2325490524940024847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268458246266804797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5d8de15459d4d3b9125242c3a14fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trigger
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5523209999227544967}
+        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
+        m_MethodName: RespawnPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerExitEvent:
+    triggerExitEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  triggerableByPlayer: 1
+  triggerableByObject: 0
+  triggerableByTaggedObject: 0
+  objectTag: 
+  limitNumberOfUses: 0
+  numberOfUses: -1
+  requiredEnabled: []
+  drawTriggerArea: 1
+  drawTriggerLines: 1
+  triggerAreaColor: {r: 0, g: 1, b: 0, a: 0.5}
+  consoleLogOnTrigger: 0
